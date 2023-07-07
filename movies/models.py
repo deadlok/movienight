@@ -38,6 +38,7 @@ class Movie(models.Model):
     genres = models.ManyToManyField(Genre, related_name="movies")
     plot = models.TextField(null=True, blank=True)
     is_full_record = models.BooleanField(default=False)
+    poster = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.title} ({self.year})"
