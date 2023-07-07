@@ -58,6 +58,10 @@ class OmdbMovie:
         self.check_for_detail_data_key("Plot")
         return self.data["Plot"]
 
+    @property
+    def poster(self):
+        return self.data["Poster"]
+
 
 class OmdbClient:
     def __init__(self, api_key):
@@ -87,7 +91,8 @@ class OmdbClient:
 
         while True:
             logger.info("Fetching page %d", page)
-            resp = self.make_request({"s": search, "type": "movie", "page": str(page)})
+            resp = self.make_request(
+                {"s": search, "type": "movie", "page": str(page)})
             resp_body = resp.json()
             if total_results is None:
                 total_results = int(resp_body["totalResults"])

@@ -32,6 +32,7 @@ def fill_movie_details(movie):
     movie.title = movie_details.title
     movie.year = movie_details.year
     movie.plot = movie_details.plot
+    movie.poster = movie_details.poster
     movie.runtime_minutes = movie_details.runtime_minutes
     movie.genres.clear()
     for genre in get_or_create_genres(movie_details.genres):
