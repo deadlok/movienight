@@ -1,2 +1,4 @@
 # movienight
-Demonstration for create a Movie Viewing Invitation to other members in this platform
+Demonstration for create a Movie viewing invitation to other members in this platform.
+Movie information will feed from OMDB.
+
